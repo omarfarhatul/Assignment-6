@@ -1,18 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peddy Website Design</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Peddy - Pet Adoption Platform</title>
+
+  <!-- Tailwind CDN -->
+  <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
-
 </head>
-<body>
-    <header>
 
-    </header>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center gap-3">
+          <div class="text-teal-600 font-bold text-xl">🐾 Peddy</div>
+          <nav class="hidden md:flex gap-6 text-sm text-gray-600">
+            <a href="#" class="hover:text-teal-600">Home</a>
+            <a href="#adopt" class="hover:text-teal-600">Adopt</a>
+            <a href="#" class="hover:text-teal-600">Contact</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <div class="hidden md:flex items-center gap-2">
+            <button class="px-4 py-2 bg-teal-600 text-white rounded-full text-sm">Sign In</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col gap-2">
+          <a href="#" class="px-2 py-2 rounded hover:bg-gray-100">Home</a>
+          <a href="#adopt" class="px-2 py-2 rounded hover:bg-gray-100">Adopt</a>
+          <a href="#" class="px-2 py-2 rounded hover:bg-gray-100">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="text-center md:text-left">
+        <p class="text-sm text-teal-500 font-semibold">Bringing Families Together ❤️</p>
+        <h1 class="mt-4 text-4xl md:text-5xl font-extrabold">Your Path to Adoption<br>
+          <span class="text-gray-600 text-base font-medium">Starts Here</span>
+        </h1>
+        <p class="mt-4 text-gray-500 max-w-xl">
+          Find your new best friend from our trusted shelter partners. Browse, like, and adopt — all in one place.
+        </p>
+        <div class="mt-6 flex justify-center md:justify-start gap-3">
+          <button id="view-more" class="px-5 py-3 bg-teal-600 text-white rounded-full">View More</button>
+          <a href="#" class="px-5 py-3 border rounded-full text-sm">Learn More</a>
+        </div>
+      </div>
+      <div class="flex justify-center md:justify-end">
+        <img src="banner.png" alt="banner" class="w-full max-w-lg rounded-xl card-shadow object-cover">
+      </div>
+    </section>
+
+    <!-- ADOPT SECTION -->
+    <section id="adopt" class="mt-14">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-xl font-bold">Adopt Your Best Friend</h2>
+              <p class="text-sm text-gray-500">Find a pet that fits your home and heart.</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-sm text-gray-500 hidden sm:inline">Sort options</span>
+              <button id="sort-price" class="px-3 py-2 bg-white border rounded text-sm">Sort by Price ↓</button>
+            </div>
+          </div>
+
+          <div id="categories" class="mt-6 flex gap-3 flex-wrap"></div>
+          <div id="spinner-container" class="mt-8 flex justify-center"></div>
+          <div id="pets-grid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+          <div id="no-pets" class="mt-6 hidden text-center text-gray-500">No pets found for this category.</div>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="w-full lg:w-80">
+          <div class="bg-white rounded-xl p-4 card-shadow">
+            <h3 class="font-semibold">Your Likes</h3>
+            <p class="text-xs text-gray-500">Thumbs-up pets you liked</p>
+            <div id="likes-grid" class="mt-4 grid grid-cols-2 gap-2"></div>
+            <div class="mt-4">
+              <button id="clear-likes" class="w-full px-3 py-2 border rounded text-sm">Clear Likes</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl max-w-3xl w-full mx-4 overflow-hidden">
+      <div class="flex justify-between items-center p-4 border-b">
+        <h4 id="modal-title" class="text-lg font-semibold">Pet Details</h4>
+        <button id="modal-close" class="text-gray-600 px-3 py-1 rounded hover:bg-gray-100">Close</button>
+      </div>
+      <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img id="modal-image" src="" alt="pet" class="w-full md:col-span-1 h-48 object-cover rounded">
+        <div class="md:col-span-2">
+          <p id="modal-desc" class="text-gray-700 mb-4"></p>
+          <ul id="modal-info" class="space-y-2 text-sm"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="mt-12 bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-start gap-6">
+      <div>
+        <div class="text-teal-600 font-bold text-xl">🐾 Peddy</div>
+        <p class="text-sm text-gray-500 mt-2">Helping pets find loving homes.</p>
+      </div>
+      <div class="flex gap-8">
+        <div>
+          <h5 class="font-semibold">Useful Links</h5>
+          <ul class="text-sm text-gray-500 mt-2 space-y-1">
+            <li><a href="#" class="hover:text-teal-600">About</a></li>
+            <li><a href="#" class="hover:text-teal-600">Contact</a></li>
+            <li><a href="#" class="hover:text-teal-600">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold">Get in touch</h5>
+          <p class="text-sm text-gray-500 mt-2">support@peddy.example</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS FILES -->
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
