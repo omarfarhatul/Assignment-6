@@ -1,10 +1,72 @@
-.card-shadow {
-  box-shadow: 0 8px 20px rgba(8, 10, 18, 0.06);
+.active{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    
+    background: rgba(14, 122, 129, 0.1);
+}
+.addopts{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(222, 11, 11);
+    border-radius: 120px;
+    color: red;
+    background: rgba(0, 8, 10, 0.1);
 }
 
-.truncate-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.usefulLink:hover{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    background: rgba(14, 122, 129, 0.1);
+}
+#devails:hover{
+    background-color:#0E7A811A;
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+}
+
+#likepet:hover{
+    background-color:#0E7A811A;
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+}
+
+.addoptpet:hover{
+    background-color:#0E7A811A;
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+   
+}
+.like{
+    color: rgb(0, 15, 128);
+}
+.like:hover{
+    color: rgb(122, 128, 0);
+}
+
+#Subscribe:hover{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    font: bold;
+    background: rgba(7, 210, 225, 0.1);
+}
+#sortByPetPrice:hover{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    font: bold;
+    background: rgba(5, 9, 255, 0.1);
+    color: black;
+}
+#view:hover{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    font: bold;
+    background: rgba(5, 9, 255, 0.1);
+    color: black;
 }
