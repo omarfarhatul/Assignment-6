@@ -2,190 +2,182 @@
 <html lang="en">
 
 <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peddy Pet Project</title>
+    <title>Pet Adoption Platform</title>
 
-    <!-- External CSS & Libraries -->
+    <!-- links -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
+        <link rel="stylesheet" href="index.css">
+        <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
 </head>
+<!-- body -->
+<body class="">
+    <!-- header -->
+    <header class="sticky top-0 z-100 ">
+        <div class="navbar bg-base-100 shadow-sm flex justify-between items-center">
 
-<body class="font-sans">
-
-    <!-- ===================== HEADER SECTION ===================== -->
-    <header class="sticky top-0 z-50 bg-base-100 shadow-sm">
-        <nav class="navbar flex justify-between items-center">
-
-            <!-- Logo + Title -->
-            <div class="flex gap-3 items-center font-bold">
-                <img class="h-6 w-6 lg:h-8 lg:w-8" src="images/logo.webp" alt="Peddy Logo">
-                <h1 class="text-xl lg:text-2xl">Peddy</h1>
+            <div class="flex gap-3 font-bold justify-center items-center">
+                <img class="h-5 w-5 lg:h-8 lg:w-8 " src="images/logo.webp" alt="">
+                <h1 class=" text-xl lg:text-2xl">Peddy</h1>
             </div>
 
-            <!-- Navigation Links -->
-            <ul class="flex gap-10 font-medium">
-                <li><a class="usefulLink hover:text-[#2159bb] px-3 py-1" href="#home">Home</a></li>
-                <li><a class="usefulLink hover:text-[#2159bb] px-3 py-1" href="#shop">Shop</a></li>
-                <li><a class="usefulLink hover:text-[#2159bb] px-3 py-1" href="#contact">Contact</a></li>
-            </ul>
-
-            <!-- User Icon -->
-            <div class="bg-gray-800 rounded-full w-9 h-9 flex items-center justify-center">
-                <a href="#" aria-label="User Profile"><i class="fa-solid fa-user text-white"></i></a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- ===================== MAIN SECTION ===================== -->
-    <main class="mb-20 w-11/12 mx-auto">
-
-        <!-- ========== HERO SECTION ========== -->
-        <section id="home" class="text-center mt-20">
             <div>
-                <p class="text-lg lg:text-2xl font-semibold text-[#0E7A81]">Bringing Families Together ❤️‍🔥</p>
-                <h1 class="mt-4 text-2xl lg:text-4xl font-bold">Your Path to Adoption <br> Starts Here</h1>
-                <p class="mt-4 max-w-2xl mx-auto text-gray-600">
-                    Find your perfect companion and give a loving home to a pet in need. Discover stories of unconditional love through adoption.
-                </p>
-                <a id="view" href="#AdoptBestFriend" class="btn mt-6 bg-[#0E7A81] text-white rounded-full hover:bg-[#2159bb]">View More</a>
+                <ul class=" flex gap-5 md:gap-10 font-medium">
+                    <li><a class="usefulLink hover:text-[#0E7A81]" href="#home">Home</a></li>
+                    <li><a class="usefulLink hover:text-[#0E7A81]" href="#shop">Shop</a></li>
+                    <li><a class="usefulLink hover:text-[#0E7A81]" href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+            <div class=" border-red-950 text-center bg-gray-800 lg:h-10 lg:w-10 w-9 rounded-full">
+                <a class="" href=""><i class=" text-white  fa-solid fa-user  py-2.5"></i></a>
             </div>
 
-            <div class="mt-8">
-                <img src="images/pet.webp" alt="Happy pet adoption" class="mx-auto w-full max-w-lg">
-            </div>
-        </section>
-
-        <!-- ========== ADOPTION INTRO SECTION ========== -->
-        <section id="AdoptBestFriend" class="text-center mt-20">
-            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Adopt Your Best Friend</h2>
-            <p class="max-w-3xl mx-auto text-gray-700">
-                Adopting a pet means giving a forever home to a soul who needs love. Whether it’s a playful puppy or a gentle senior cat,
-                adoption brings joy, loyalty, and companionship into your life.
-            </p>
-        </section>
-
-        <!-- ========== CATEGORY BUTTONS ========== -->
-        <section id="categoriesContainer" class="flex flex-wrap justify-between my-10">
-            <!-- Dynamic Buttons will be added here by JS -->
-        </section>
-
-        <!-- ========== SORT SECTION ========== -->
-        <div class="flex justify-between items-center mb-10">
-            <h3 class="text-xl font-bold">Best Deal For You</h3>
-            <button id="sortByPetPrice" class="btn bg-[#0E7A81] text-white rounded-xl hover:bg-[#0c6c72]">Sort by Price</button>
         </div>
+    </header>
+    <main class="mb-20 w-11/12 mx-auto">
+        <!-- pet section -->
+        <section id="home" class=" mb-10 text-center mt-20 lg:w-150 md:w-120 mx-auto">
+            <div>
+                <p class=" lg:text-2xl md:text-xl font-bold">
+                    Bringing Families Together ❤️‍🔥
+                </p>
+                <h1 class=" mt-5 text-xl lg:text-4xl md:text-2xl font-bold">
+                    Your Path to Adoption <br>Start Here
+                </h1>
+                <p class="mt-4 text-center">It is a long established fact that a reader will be distracted by the
+                    readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                    a.</p>
+            </div>
+            <div>
+                <a id="view" class="btn mt-5 bg-[#0E7A81] text-white rounded-xl" href="#AdoptBestFriend">View More</a>
 
-        <!-- ========== PET DISPLAY SECTION ========== -->
+            </div>
+            <div class="">
+                <img class="" src="images/pet.webp" alt="">
+            </div>
+        </section>
+        <!-- Adopt -->
+        <section id="AdoptBestFriend" class=" mb-10 text-center mt-20 lg:w-150 md:w-120 mx-auto">
+            <h1 class="text-center font-bold text-xl lg:text-3xl md:text-2xl mb-4">Adopt Your Best Friend</h1>
+            <p class="">Adopt your best friend and discover the joy of unconditional love. Thousands of pets in shelters
+                are waiting for someone like you to give them a second chance. Whether you choose a playful puppy, a
+                gentle cat, or a loyal older pet, you'll gain a faithful companion who brings happiness every day. Open
+                your heart and home—adopting a pet is one of the most rewarding decisions you’ll ever make.</p>
+        </section>
+        <!-- Button category -->
+        <section id="categoriesContainer" class="flex mb-10 justify-between">
+
+        </section>
+        <!-- Sort by Price section -->
+        <div class="flex justify-between mb-20 items-center">
+            <h1 class="text-xl font-bold">Best Deal For you</h1>
+
+            <button id="sortByPetPrice" class="btn mt-5 bg-[#0E7A81] text-white rounded-xl">Sort by Price</button>
+
+        </div>
+        <!-- pet container -->
         <div class="lg:flex lg:justify-between md:flex md:justify-between">
-            <!-- Pet Cards Container -->
             <div id="petContainer"
-                class="grid lg:grid-cols-3 md:grid-cols-2 gap-10 bg-base-100 shadow-sm p-4 rounded-xl">
-                <!-- Pets will load dynamically here -->
+                class="card bg-base-100 shadow-sm  grid lg:grid-cols-3 md:grid-cols-2 gap-10   bg-base-100   border-red-950 ">
             </div>
 
-            <!-- Liked Pets Container -->
             <div id="likePetContainer"
-                class="mt-10 lg:mt-0 md:mt-0 lg:w-70 md:w-50 grid grid-cols-3 gap-3 bg-base-100 shadow-sm p-5 rounded-xl">
-                <!-- Liked pets will appear here -->
+                class="card  mx-auto mt-5 lg:mt-0 md:mt-0 lg:w-70 md:w-50 h-full  grid grid-cols-5 lg:grid-cols-3 md:grid-cols-2  gap-3 bg-base-100 shadow-sm  p-5 ">
+
             </div>
         </div>
     </main>
 
-    <!-- ===================== MODALS ===================== -->
-
-    <!-- Pet Details Modal -->
+    <!-- pet details -->
+    <button id="showmodal" class="btn hidden" onclick="customModalData.showModal()">open modal</button>
     <dialog id="customModalData" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
-            <div id="modalcontent"><!-- JS Inserts Pet Details Here --></div>
+            <div id="modalcontent">
+
+            </div>
             <div class="modal-action">
                 <form method="dialog">
-                    <button class="btn bg-[#0E7A811A] text-[#0E7A81] rounded-xl">Close</button>
+                    <button id="modalClose" class="btn bg-[#0E7A811A]  text-[#0E7A81]">Close</button>
                 </form>
             </div>
         </div>
     </dialog>
 
-    <!-- Adoption Success Modal -->
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
-        <div class="bg-white text-center px-10 py-8 rounded-3xl shadow-xl space-y-4">
-            <div class="text-3xl font-medium">
-                <p><i class="fa-solid fa-handshake text-green-600"></i></p>
-                <p class="text-green-600">Congratulations!</p>
+
+    <!-- Modal  -->
+    <div id="modal" class="fixed inset-0 bg-opacity-50 justify-center items-center hidden z-50 ">
+        <div class=" bg-white text-center px-10 py-8 rounded-3xl shadow-xl space-y-4">
+
+            <div class="text-3xl font-medium ">
+                <p><i class="fa-solid fa-handshake"></i></p>
+                <p class="text-green-600">Congrates !</p>
             </div>
-            <p class="text-gray-700">Adoption process has started for your pet ❤️</p>
-            <div id="count" class="text-5xl font-bold text-[#0E7A81]">3</div>
+            <div>
+                <p class="text-black">Addoption Process is Start For Your Pet</p>
+            </div>
+            <div class="text-5xl font-bold" id="count">3</div>
         </div>
     </div>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer id="contact" class="footer bg-neutral text-neutral-content p-10 flex flex-col lg:flex-row justify-between">
-        <div class="space-y-3">
-            <div class="flex items-center gap-3">
-                <img src="images/logo.webp" alt="Logo" class="w-8 h-8">
-                <p class="text-2xl font-bold">Peddy</p>
-            </div>
-            <p>
-                Location: av. Washington 165, NY CA 54003 <br>
-                Phone: +31 85 964 47 25 <br>
-                Email: info@yourdomain.com <br>
-                Hours: 9:00 AM - 5:00 PM
-            </p>
+
+    <!-- footer -->
+    <footer class="lg:flex  md:flex  sm:flex-col footer lg:footer-horizontal bg-neutral text-neutral-content p-10 ">
+        <div class="lg:flex md:flex lg:gap-50 md:gap-30 gap-10 lg:justify-between justify-center md:justify-between mx-auto">
+            <nav>
+                <div class="flex items-center gap-3">
+                    <img src="images/logo.webp" alt="">
+                    <p class="text-2xl font-bold">Peddy</p>
+                </div>
+                <p class="">Location: av. Washington 165, NY CA 54003 <br>
+                    Phone: +31 85 964 47 25 <br>
+                    Email: info@yourdomain.com <br>
+                    Openings hours: 9.00 AM - 5.00 PM</p>
+            </nav>
+            <nav class="grid">
+                <h6 class="footer-title">Useful Links</h6>
+                <a class="" href="#home">Home</a>
+                <a class="" href="https://paddy.vn/?srsltid=AfmBOopZWD2UMmm9CnPQ-hik0mLe3DzThZLqVnnQWOvlbNNQ1klTFYR_"> Shop</a>
+                <a class="" href="">Contact</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Drop a Message</h6>
+                <input placeholder="Enter your email" class="input bg-gray-300 text-black rounded-xl " type="text"
+                    name="" id="inputEmail">
+                <div id="message"></div>
+                <button id="Subscribe"
+                    class=" mt-5 w-70 btn border-none bg-[#0E7A81] text-white rounded-xl">Subscribe</button>
+            </nav>
         </div>
 
-        <div>
-            <h6 class="footer-title font-semibold">Useful Links</h6>
-            <a href="#home" class="hover:underline">Home</a>
-            <a href="https://paddy.vn/" class="hover:underline">Shop</a>
-            <a href="#contact" class="hover:underline">Contact</a>
-        </div>
-
-        <div>
-            <h6 class="footer-title font-semibold">Drop a Message</h6>
-            <input id="inputEmail" placeholder="Enter your email"
-                class="input bg-gray-300 text-black rounded-xl w-full mb-3" type="text">
-            <button id="Subscribe"
-                class="btn w-full bg-[#0E7A81] text-white rounded-xl hover:bg-[#0c6c72]">Subscribe</button>
+        <div class="mx-auto mb-10">
+            <h1 class="font-bold">&copy; All right reserved by Peddy <span id="year"></span></h1>
         </div>
     </footer>
 
-    <!-- Footer Bottom -->
-    <div class="text-center py-4 bg-gray-900 text-gray-300">
-        <p>&copy; <span id="year"></span> All rights reserved by <strong>Peddy</strong></p>
-    </div>
-
-    <!-- ===================== SCRIPTS ===================== -->
+    <!-- script -->
     <script>
-        // ✅ Dynamic Year Display
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // ✅ Email Subscription Logic
+        const years = new Date()
+        document.getElementById('year').textContent = years.getFullYear();
         document.getElementById('Subscribe').addEventListener('click', function () {
-            const inputEmail = document.getElementById('inputEmail').value.trim();
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            if (!emailPattern.test(inputEmail)) {
-                alert('⚠️ Please enter a valid email address.');
-                document.getElementById('inputEmail').value = '';
-            } else {
-                alert(`✅ Thanks for subscribing with: ${inputEmail}`);
-                document.getElementById('inputEmail').value = '';
+            const inputemail = document.getElementById('inputEmail').value
+            if (inputemail === '' || !isNaN(inputemail)) {
+                alert('Place Enter Your Valid Email')
+                document.getElementById('inputEmail').value = ''
             }
-        });
+            else {
+                alert(`Thank's For Subscribe By Your Email: ${inputemail}`);
+                document.getElementById('inputEmail').value = ''
+            }
+        })
     </script>
-
-    <!-- script file -->
     <script src="js/api.js"></script>
     <script src="js/main.js"></script>
-
 </body>
-
 </html>
