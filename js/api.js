@@ -76,8 +76,6 @@ sortPet()
                   </div>
                   `
         PetContainer.append(card) 
-      
-        
       });
   }
 
