@@ -2,15 +2,10 @@
 const Loadpet = () => {
     fetch(`https://openapi.programming-hero.com/api/peddy/pets`)
         .then(res => res.json())
-        .then((data) => displayPet(data.pets
-            
-        ))
-
+        .then((data) => displayPet(data.pets))
         .catch((error) => console.log(error))
-
-        
-
 };
+
 //sortPet
 const sortPet = () => {
     fetch(`https://openapi.programming-hero.com/api/peddy/pets`)
@@ -26,11 +21,7 @@ const sortPet = () => {
           })
 
         })
-        
         .catch((error) => console.log(error))
-        
-        
-
 };
 
 sortPet()
@@ -43,11 +34,11 @@ sortPet()
       if(pet.length == 0){
         PetContainer.classList.remove("grid")
         PetContainer.innerHTML=`
-        <div class=" min-h-[] w-[] lg:min-h-[500px] lg:w-[1100px] md:min-h-[300px] md:w-[900px] mx-auto flex flex-col gap-5 justify-center items-center">
+        <div class="min-h-[] w-[] lg:min-h-[500px] lg:w-[1100px] md:min-h-[300px] md:w-[900px] mx-auto flex flex-col gap-5 justify-center items-center">
             
-        <img class=" p-20 h-[] w-[] mx-auto " src="images/error.webp"/>
+        <img class="p-20 h-[] w-[] mx-auto " src="images/error.webp"/>
   
-        <p class=" mb-10 font-bold lg:text-2xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
+        <p class="mb-10 font-bold lg:text-2xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
         
         </div> 
   
@@ -64,16 +55,16 @@ sortPet()
           const card = document.createElement('div');
           card.innerHTML =`
                   <div class="card w-80 bg-base-100 shadow-sm mx-auto">
-                       <div class="card-body">
+                      <div class="card-body">
                       <div>
-                           <img class="rounded-xl" src=${element.image}/>
+                          <img class="rounded-xl" src=${element.image}/>
                       </div>
                           <p class="font-bold text-xl">${element.pet_name}</p>
                           ${element.breed == undefined ? `<span>Breed : Not Found </span>`: `Breed : ${element.breed} `}
-                         
+                        
                           ${element.date_of_birth == null ? `<span><i class="fa-solid fa-cake-candles"></i> Birth : Not Available</span>`:`<span><i class="fa-solid fa-cake-candles"></i> Birth ${element.date_of_birth} </span> `}
                           ${element.gender == undefined ? `<span><i class="fa-solid fa-mercury"></i> Gender :  Not Found </span>`:`<span><i class="fa-solid fa-mercury"></i> Gender : ${element.gender} </span>`}
-                           ${element.price == null ? `<span><i class="fa-solid fa-dollar-sign"></i> Price : Negotiable</span>`:`<span><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price} $</span>`}
+                          ${element.price == null ? `<span><i class="fa-solid fa-dollar-sign"></i> Price : Negotiable</span>`:`<span><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price} $</span>`}
                          
                           <div class="divider"></div>
                           <div class="flex justify-between" >
@@ -82,16 +73,13 @@ sortPet()
                               <button id="devails" onclick="loadDetails(${element.petId})" class="btn rounded-xl  font-bold text-[#0E7A81]">Details</i></button>
                           </div>
                       </div>
-                   </div>
-                   
-                  
+                  </div>
                   `
         PetContainer.append(card) 
       
         
       });
   }
-
 
 
 
@@ -111,7 +99,6 @@ const displayDetails =(data)=>{
         <img class="rounded-2xl object-cover h-70 w-full " src=${data.petData.image}/>
          <p class="font-bold text-xl mt-2">${data.petData.pet_name}</p>
         <div class=" flex justify-between">
-       
                     <div>
                            <div> ${data.petData.breed == undefined ? `<span>Breed : Not Found </span>`: `Breed : ${data.petData.breed} `}</div>
                    <div>${data.petData.date_of_birth == null ? `<span><i class="fa-solid fa-cake-candles"></i> Birth : Not Available</span>`:`<span><i class="fa-solid fa-cake-candles"></i> Birth ${data.petData.date_of_birth} </span> `}</div>
@@ -122,11 +109,6 @@ const displayDetails =(data)=>{
                       <div> ${data.petData.gender == undefined ? `<span><i class="fa-solid fa-mercury"></i> Gender :  Not Found </span>`:`<span><i class="fa-solid fa-mercury"></i> Gender : ${data.petData.gender} </span>`}</div>
                    <div> ${data.petData.price == null ? `<span><i class="fa-solid fa-dollar-sign"></i> Price : Negotiable</span>`:`<span><i class="fa-solid fa-dollar-sign"></i> Price : ${data.petData.price} $</span>`}</div>
                   </div>
-                  
-                        
-                 
-                        
-
         </div>
         <div class="divider"></div>
         <P>${data.petData.pet_details}</P>
@@ -157,7 +139,6 @@ const displayLikeImg=(image)=>
     <img class="rounded-sm mx-auto" src=${image}/>
    `
    likepet.append(divs)
-
 }
 
 

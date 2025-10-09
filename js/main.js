@@ -32,17 +32,13 @@ const displayCatagories = (data)=>{
      
 }
 
-
 //showIndividualCatagoriPet
 const individualCatagory =(id)=>{
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${id}`)
         .then((res)=>res.json())
         .then((data)=>{
             
-            displayPet(data.data)
-           
-            // console.log(data.data)
-          
+        displayPet(data.data)
         })
         const PetContainer = document.getElementById('petContainer');
         
@@ -72,10 +68,7 @@ const removeActiveClass=()=>{
     for(let btn of buttons){
         btn.classList.remove('active');
     }
-    
-
 }
 
 
- 
 loadCatagories()
