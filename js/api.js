@@ -19,7 +19,6 @@ const sortBypet = () => {
             displayPet(sortedPet);
             
           })
-
         })
         .catch((error) => console.log(error))
 };
@@ -29,16 +28,13 @@ sortBypet();
 //displayPet
   const displayPet = (pet) => {
     const PetContainer = document.getElementById('petContainer');
-    //  console.log(pet)
-    
+
       if(pet.length == 0){
         PetContainer.classList.remove("grid")
         PetContainer.innerHTML=`
         <div class="min-h-[] w-[] lg:min-h-[500px] lg:w-[1100px] md:min-h-[300px] md:w-[900px] mx-auto flex flex-col gap-5 justify-center items-center">
-            
-        <img class="p-20 h-[] w-[] mx-auto " src="images/error.webp"/>
-  
-        <p class="mb-10 font-bold lg:text-2xl md:text-2xl ">Oops!! Sorry, There is no content here</p>
+          <img class="p-20 h-[] w-[] mx-auto " src="images/error.webp"/>
+          <p class="mb-10 font-bold lg:text-2xl md:text-2xl">Oops!! Sorry, There is no content here</p>
         </div> 
         `
       }
@@ -48,9 +44,6 @@ sortBypet();
       }
   
       pet.forEach(element => {
-        
-          // console.log(element)
-        
           const card = document.createElement('div');
           card.innerHTML =`
                   <div class="card w-80 bg-base-100 shadow-sm mx-auto">
