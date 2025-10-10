@@ -18,9 +18,8 @@
 <!-- body -->
 <body>
     <!-- header -->
-    <header class="sticky top-0 z-100 ">
+    <header class="sticky top-0 z-100">
         <div class="navbar bg-base-100 shadow-sm flex justify-between items-center">
-
             <div class="flex gap-3 font-bold justify-center items-center">
                 <img class="h-5 w-5 lg:h-8 lg:w-8 " src="images/logo.webp" alt="">
                 <h1 class=" text-xl lg:text-2xl">Peddy</h1>
@@ -35,11 +34,12 @@
 
             </div>
             <div class="border text-center lg:h-10 lg:w-10 w-9 rounded-full">
-                <a class="" href=""><i class=" text-black  fa-solid fa-user  py-2.5"></i></a>
+                <a class="" href=""><i class=" text-black fa-solid fa-user py-2.5"></i></a>
             </div>
-
         </div>
     </header>
+
+    <!-- main -->
     <main class="mb-20 w-11/12 mx-auto">
         <!-- pet section -->
         <section id="home" class=" mb-10 text-center mt-20 lg:w-150 md:w-120 mx-auto">
@@ -77,7 +77,7 @@
         <div class="flex justify-between mb-20 items-center">
             <h1 class="text-xl font-bold">Best Deal For you</h1>
 
-            <button id="sortByPetPrice" class="btn mt-5 bg-[#0E7A81] text-white rounded-xl">Sort by Price</button>
+            <button id="sortByPetPrice" class="btn mt-5 bg-[#0E7A81] text-white rounded-full">Sort by Price</button>
 
         </div>
         <!-- pet container -->
@@ -108,10 +108,10 @@
 
 
     <!-- modal  -->
-    <div id="modal" class="fixed inset-0 bg-opacity-50 justify-center items-center hidden z-50 ">
-        <div class=" bg-white text-center px-10 py-8 rounded-3xl shadow-xl space-y-4">
+    <div id="modal" class="fixed inset-0 bg-opacity-50 flex justify-center items-center hidden z-50">
+        <div class="bg-white text-center px-10 py-8 rounded-3xl shadow-xl space-y-4">
 
-            <div class="text-3xl font-medium ">
+            <div class="text-3xl font-medium">
                 <p><i class="fa-solid fa-handshake"></i></p>
                 <p class="text-green-600">Congrates !</p>
             </div>
